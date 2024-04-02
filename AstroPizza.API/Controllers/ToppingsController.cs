@@ -7,9 +7,9 @@ namespace AstroPizza.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ToppingController : BaseController
+    public class ToppingsController : BaseController
     {
-        public ToppingController(IMediator mediator) : base(mediator)
+        public ToppingsController(IMediator mediator) : base(mediator)
         {
         }
 
