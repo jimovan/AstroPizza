@@ -15,7 +15,7 @@ namespace AstroPizza.Infrastructure
         {
             services.AddDbContext<AstroPizzaDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("AstroPizzaConnectionString"));
+                options.UseSqlServer(configuration.GetConnectionString("AstroPizza"));
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -36,7 +36,7 @@ namespace AstroPizza.Infrastructure
                     .AddJsonFile("appsettings.json")
                     .Build();
 
-                var connectionString = configuration.GetConnectionString("AstroPizzaConnectionString");
+                var connectionString = configuration.GetConnectionString("AstroPizza");
 
                 var builder = new DbContextOptionsBuilder<AstroPizzaDbContext>();
                 builder.UseSqlServer(connectionString);
